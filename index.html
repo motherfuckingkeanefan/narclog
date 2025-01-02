@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narcistische Gedragslogboek</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Narcistische Gedragslogboek</h1>
+        <p>Leg elke grensoverschrijding en manipulatieve tactiek vast voor duidelijkheid en innerlijke rust.</p>
+    </header>
+    <main>
+        <section id="event-form">
+            <h2>Nieuw Gebeurtenis Registreren</h2>
+            <form id="log-form">
+                <label for="event-date">Datum:</label>
+                <input type="date" id="event-date" required>
+                
+                <label for="event-type">Type:</label>
+                <select id="event-type" required>
+                    <optgroup label="Direct Contact">
+                        <option value="Telefoontje">Telefoontje</option>
+                        <option value="Sms Bericht">Sms Bericht</option>
+                        <option value="E-mail">E-mail</option>
+                        <option value="Voicemail">Voicemail</option>
+                        <option value="Bezoek aan Huis/Werk">Bezoek aan Huis/Werk</option>
+                    </optgroup>
+                    <optgroup label="Manipulatietechnieken">
+                        <option value="Schuldgevoel Aanpraten">Schuldgevoel Aanpraten</option>
+                        <option value="Nep-Excuses">Nep-Excuses</option>
+                        <option value="Vliegende Apen">Vliegende Apen (Derde Partijen)</option>
+                        <option value="Roddels Verspreiden">Roddels Verspreiden</option>
+                    </optgroup>
+                    <optgroup label="Online Inbreuken">
+                        <option value="Social Media Stalken">Social Media Stalken</option>
+                        <option value="Anonieme Reacties">Anonieme Reacties</option>
+                        <option value="Nepaccounts">Nepaccounts</option>
+                    </optgroup>
+                    <optgroup label="Overige Gedragingen">
+                        <option value="Sabotage">Sabotage</option>
+                        <option value="Stalken">Stalken</option>
+                        <option value="Bedreigingen">Bedreigingen</option>
+                        <option value="Eigendommen Beschadigen">Eigendommen Beschadigen</option>
+                        <option value="Overig">Overig</option>
+                    </optgroup>
+                </select>
+
+                <label for="event-description">Beschrijving:</label>
+                <textarea id="event-description" rows="4" required></textarea>
+                
+                <button type="submit">Gebeurtenis Toevoegen</button>
+            </form>
+        </section>
+        
+        <section id="log-display">
+            <h2>Geregistreerde Gebeurtenissen</h2>
+            <p id="last-event-counter">Dagen sinds laatste gebeurtenis: <span id="days-since-last">0</span></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Type</th>
+                        <th>Beschrijving</th>
+                    </tr>
+                </thead>
+                <tbody id="event-logs">
+                    <!-- Gebeurtenissen worden hier dynamisch toegevoegd -->
+                </tbody>
+            </table>
+            <button id="export-btn">Download Logs als Excel</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Narcistische Gedragslogboek</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
